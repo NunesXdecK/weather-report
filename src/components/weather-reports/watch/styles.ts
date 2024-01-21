@@ -14,5 +14,5 @@ export const Timer = styled.section<HTMLProps<HTMLDivElement>>`
 export const Today = styled.section<HTMLProps<HTMLDivElement>>`
   font-size: 12px;
   font-weight: 400;
-  color: ${(props) => props.theme.colors.secondaryText};
+  color: ${(props) => props.theme.colors.primaryText};
 `;
