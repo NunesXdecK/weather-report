@@ -4,7 +4,7 @@ import { LocalStorageAdapter } from "./local-storage-adapter";
 import { HistoryRepository } from "../repositories/history-repository";
 
 describe("LocalStorageAdapter", () => {
-  test("Testa chamada do histórico", async () => {
+  test("shoud call history", async () => {
     const mockValue = [
       {
         date: new Date("2024-12-21T00:00:00"),
