@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Button } from "../ui/button/styles";
 import { Paper } from "../ui/card/styles";
 import { Forms } from "../ui/forms/styles";
@@ -17,12 +17,6 @@ const GeoForm: React.FC = () => {
 
   const latitudeRef = useRef<HTMLInputElement>(null);
   const longitdeRef = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    if (!latitudeRef?.current || !longitdeRef?.current) return;
-    latitudeRef.current.value = "2.811773";
-    longitdeRef.current.value = "-60.716728";
-  }, []);
 
   return (
     <section>
