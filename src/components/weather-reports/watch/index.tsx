@@ -1,19 +1,14 @@
-import { useEffect, useState } from "react";
 import { DateUtils } from "../../../utils/date-utils";
 import { Container, Today, Timer } from "./styles";
+import { useWatch } from "../../../hooks/use-watch";
 
 const Watch: React.FC = () => {
-  const [update, setUpdate] = useState<boolean>(true);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => setUpdate((curr) => !curr), 60000);
-    return () => clearInterval(intervalId);
-  }, [update]);
+  const { date } = useWatch(false)
 
   return (
     <Container>
-      <Timer>{DateUtils.formatTime(new Date())}</Timer>
-      <Today>{DateUtils.formatDate(new Date())} </Today>
+      <Timer>{DateUtils.formatTime(date)}</Timer>
+      <Today>{DateUtils.formatDate(date)} </Today>
     </Container>
   );
 };
