@@ -2,7 +2,6 @@ import { create } from "zustand";
 import { ErrorType, History } from "../types/model-types";
 import { WeatherModel, WeatherParams } from "../types/weather-types";
 import { Filter } from "../models/filter";
-import { LocalMeteoAdapter } from "../adapters/local-meteo-adapter";
 import { GetForecasts } from "../use-cases/get-forecast";
 import { ValidationError } from "../errors/validation-error";
 import { OpenMeteoAdapter } from "../adapters/open-meteo-adapter";
@@ -79,10 +78,8 @@ export const useWeatherStore = create<StoreProps>((set, get) => ({
         setLoading(true);
         try {
           const filter = new Filter(params);
-          const api = new LocalMeteoAdapter();
-          //const api = new OpenMeteoAdapter();
+          const api = new OpenMeteoAdapter();
           const result = await new GetForecasts(api).execute(filter);
-          //console.log(JSON.stringify(result))
           setData(result);
           const historyAPI = new LocalStorageAdapter("history");
           const historyRepository = new HistoryRepository(historyAPI);
