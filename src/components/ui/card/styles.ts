@@ -16,7 +16,7 @@ const Header = styled.div<HTMLProps<HTMLDivElement>>`
   margin: 0 24px 0 24px;
   padding: 24px 0 24px 0;
   border-radius: 0 0 2px 2px;
-  border-bottom: 1px solid ${(props) => props.theme.colors.secondaryText}40;
+  border-bottom: 1px solid ${(props) => props.theme.colors.primaryText}40;
   color: ${(props) => props.theme.colors.primaryText};
   &.spacing {
     display: flex;
