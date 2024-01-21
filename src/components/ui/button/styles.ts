@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { globals } from "../globals";
 import { HTMLProps } from "react";
 
 const Primary = styled.button<HTMLProps<HTMLButtonElement>>`
@@ -11,17 +10,17 @@ const Primary = styled.button<HTMLProps<HTMLButtonElement>>`
   border-radius: 2px;
   letter-spacing: 0.5px;
   transition-duration: 300ms;
-  color: ${globals.colors.white};
+  color: ${(props) => props.theme.colors.primaryButtonText};
   border: none;
   text-align: center;
   text-decoration: none;
-  background-color: ${globals.colors.background};
+  background-color: ${(props) => props.theme.colors.primaryButtonBackground};
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow: ${globals.shadows.default};
+  box-shadow: ${(props) => props.theme.shadows.default};
 
   &:hover {
-    box-shadow: ${globals.shadows.hover};
+    box-shadow: ${(props) => props.theme.shadows.hover};
   }
 `;
 

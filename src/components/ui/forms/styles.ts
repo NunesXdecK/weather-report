@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { globals } from "../globals";
 import { HTMLProps } from "react";
 
 const Form = styled.form<HTMLProps<HTMLFormElement>>`
@@ -15,7 +14,8 @@ const Form = styled.form<HTMLProps<HTMLFormElement>>`
   }
 `;
 
-const InputField = styled.div<HTMLProps<HTMLDivElement>>``;
+const InputField = styled.div<HTMLProps<HTMLDivElement>>`
+`;
 
 const Input = styled.input<HTMLProps<HTMLInputElement>>`
   padding: 0;
@@ -25,17 +25,18 @@ const Input = styled.input<HTMLProps<HTMLInputElement>>`
   border-radius: 0;
   line-height: 1.15;
   transition-duration: 300ms;
+  color: ${(props) => props.theme.colors.primaryText};
   border: none;
   outline: none;
   box-shadow: none;
   background-color: transparent;
-  border-bottom: 1px solid ${globals.colors.gray};
+  border-bottom: 1px solid ${(props) => props.theme.colors.inputBorder};
 
   &:active,
   &:focus,
   &:hover {
-    box-shadow: ${globals.shadows.inputFocus};
-    border-bottom: 1px solid ${globals.colors.black};
+    box-shadow: ${(props) => props.theme.shadows.inputFocus};
+    border-bottom: 1px solid ${(props) => props.theme.colors.inputHoverBorder};
   }
 
   &[type="number"]::-webkit-inner-spin-button,
@@ -55,12 +56,12 @@ const Label = styled.label<HTMLProps<HTMLLabelElement>>`
   transition-duration: 300ms;
   text-align: initial;
   cursor: text;
-  color: ${globals.colors.black};
+  color: ${(props) => props.theme.colors.label};
 `;
 
 const Error = styled.p`
   margin: 0;
-  color: ${globals.colors.error};
+  color: ${(props) => props.theme.colors.error};
 `;
 
 export const Forms = {

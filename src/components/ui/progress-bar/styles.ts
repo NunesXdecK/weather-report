@@ -1,6 +1,5 @@
 import { HTMLProps } from "react";
 import styled from "styled-components";
-import { globals } from "../globals";
 
 export const Progress = styled.div<HTMLProps<HTMLDivElement>>`
   position: relative;
@@ -10,11 +9,11 @@ export const Progress = styled.div<HTMLProps<HTMLDivElement>>`
   background-color: #acece6;
   margin: 0.5rem 0 1rem 0;
   overflow: hidden;
-  background-color: ${globals.colors.white};
+  background-color: ${(props) => props.theme.colors.holder};
 `;
 
 export const Indeterminated = styled.div<HTMLProps<HTMLDivElement>>`
-  background-color: ${globals.colors.background};
+  background-color: ${(props) => props.theme.colors.progressBar};
   &:before {
     content: "";
     position: absolute;

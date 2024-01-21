@@ -7,6 +7,7 @@ export const Header = styled.div<HTMLProps<HTMLDivElement>>`
   display: flex;
   font-weight: 600;
   align-items: center;
+  color: ${(props) => props.theme.colors.primaryText};
   img {
     width: 18px;
     height: 18px;
@@ -34,6 +35,7 @@ export const Header = styled.div<HTMLProps<HTMLDivElement>>`
 
 export const Footer = styled.div<HTMLProps<HTMLDivElement>>`
   text-align: center;
+  color: ${(props) => props.theme.colors.primaryText};
   @media screen and (max-width: 430px) {
     font-size: 12px;
   }

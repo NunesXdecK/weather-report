@@ -9,6 +9,7 @@ export const HourContainer = styled.div<HTMLProps<HTMLDivElement>>`
     font-size: 16px;
     font-weight: 600;
     text-wrap: nowrap;
+    color: ${(props) => props.theme.colors.primaryText};
   }
 
   & > img {
@@ -21,4 +22,5 @@ export const HourPeriod = styled.span<HTMLProps<HTMLSpanElement>>`
   font-size: 10px;
   font-weight: normal;
   vertical-align: top;
+  color: ${(props) => props.theme.colors.primaryText};
 `;

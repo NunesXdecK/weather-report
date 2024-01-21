@@ -1,14 +1,13 @@
 import styled from "styled-components";
-import { globals } from "../globals";
 import { HTMLProps } from "react";
 
 const Holder = styled.div<HTMLProps<HTMLDivElement>>`
   transition-duration: 300ms;
-  box-shadow: ${globals.shadows.default};
-  background-color: ${globals.colors.white};
+  box-shadow: ${(props) => props.theme.shadows.default};
+  background-color: ${(props) => props.theme.colors.cardBackground};
 
   &:hover {
-    box-shadow: ${globals.shadows.hover};
+    box-shadow: ${(props) => props.theme.shadows.hover};
   }
 `;
 
@@ -17,7 +16,8 @@ const Header = styled.div<HTMLProps<HTMLDivElement>>`
   margin: 0 24px 0 24px;
   padding: 24px 0 24px 0;
   border-radius: 0 0 2px 2px;
-  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+  border-bottom: 1px solid ${(props) => props.theme.colors.secondaryText}40;
+  color: ${(props) => props.theme.colors.primaryText};
   &.spacing {
     display: flex;
     align-items: center;
