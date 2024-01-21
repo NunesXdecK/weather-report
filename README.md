@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+# Weather Report
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto tem como propósito demonstrar habilidades abrangentes no desenvolvimento frontend para a web, destacando-se em diversas tecnologias de programação.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Índice
 
-## Expanding the ESLint configuration
+- [Visão Geral](#visão-geral)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação](#instalação)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Visão Geral
 
-- Configure the top-level `parserOptions` property like this:
+O foco desta iniciativa é oferecer uma visão prática e aplicada de práticas modernas em frontend. Utilizando tecnologias como React, Vite, Styled Components, Clean Code, DDD (Domain-Driven Design), Ports and Adapters, e Zustand, o projeto busca evidenciar a capacidade de integrar e aplicar essas ferramentas de forma eficaz.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Tecnologias Utilizadas
+
+- [Node.JS 18.17.0](https://nodejs.org/);
+- [TypeScript](https://www.typescriptlang.org/);
+- [React](https://reactjs.org/);
+- [React Router Dom](https://reactrouter.com/);
+- [Vite](https://vitejs.dev/);
+- [Vitest](https://vitest.dev/);
+- [Testing Library](https://testing-library.com/);
+- [Zustand](https://zustand-demo.pmnd.rs/);
+- [Styled Components](https://styled-components.com/);
+- [Open Meteo](https://open-meteo.com/):
+
+## Instalação
+
+Instale o [Node.JS](https://nodejs.org/) na versão 18.17.0 acessando o site
+
+Clone do projeto
+
+Instale as dependencias
+
+NPM
+```bash
+npm install
 ```
+YARN
+```bash
+yarn install
+```
+Então inicie o servidor vite
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+NPM
+```bash
+npm run dev
+```
+YARN
+```bash
+yarn dev
+```
+Acesse a [url](http://localhost:5173/)
