@@ -42,15 +42,17 @@ const GeoForm: React.FC = () => {
             <Forms.Input
               type="text"
               id="latitude"
+              data-testid="latitude"
               ref={latitudeRef}
               disabled={loading}
-            />
+              />
           </Forms.InputField>
           <Forms.InputField>
             <Forms.Label htmlFor="longitude">Longitude</Forms.Label>
             <Forms.Input
               type="text"
               id="longitude"
+              data-testid="longitude"
               ref={longitdeRef}
               disabled={loading}
             />
