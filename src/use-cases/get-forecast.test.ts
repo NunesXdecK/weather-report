@@ -5,7 +5,7 @@ import { GetForecasts } from "./get-forecast";
 import { Filter } from "../models/filter";
 
 describe("GetForecasts", () => {
-  test("Chamar a função com os filtros corretamente", async () => {
+  test("should call the function with the correct filters", async () => {
     let forecastCalledWith: Filter | undefined;
     const filter = new Filter({
       latitude: "10.00",

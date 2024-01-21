@@ -21,6 +21,7 @@ export const Temperature = styled.div<HTMLProps<HTMLDivElement>>`
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  color: ${(props) => props.theme.colors.primaryText};
 
   text-align: left;
   h1 {

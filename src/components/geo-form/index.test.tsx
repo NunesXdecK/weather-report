@@ -2,17 +2,27 @@
 import { describe, test, expect } from "vitest";
 import { fireEvent, render } from "@testing-library/react";
 import GeoForm from ".";
+import { ThemeProvider } from "styled-components";
+import { dayTheme } from "../../hooks/use-hour-theme";
 
 describe("GeoForm", () => {
-  test("Deve checar se o componente foi renderizado corretamente", async () => {
-    const { getByText } = render(<GeoForm />);
+  test("should check if component are correctly rendered", async () => {
+    const { getByText } = render(
+      <ThemeProvider theme={dayTheme}>
+        <GeoForm />
+      </ThemeProvider>
+    );
     expect(getByText("Latitude")).toBeTruthy();
     expect(getByText("Longitude")).toBeTruthy();
     expect(getByText("BUSCAR")).toBeTruthy();
   });
 
-  test("Deve checar se o componente dá feedback com informações inválidas", async () => {
-    const { getByTestId, getByText } = render(<GeoForm />);
+  test("should if the component gives feedback on invalid information", async () => {
+    const { getByTestId, getByText } = render(
+      <ThemeProvider theme={dayTheme}>
+        <GeoForm />
+      </ThemeProvider>
+    );
 
     fireEvent.input(getByTestId("latitude"), { target: { value: "abc" } });
     fireEvent.input(getByTestId("longitude"), { target: { value: "abc" } });

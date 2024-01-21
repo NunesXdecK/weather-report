@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { HTMLProps } from "react";
-import { globals } from "../../ui/globals";
 
 export const Container = styled.section<HTMLProps<HTMLDivElement>>`
   text-align: center;
@@ -9,11 +8,11 @@ export const Container = styled.section<HTMLProps<HTMLDivElement>>`
 export const Timer = styled.section<HTMLProps<HTMLDivElement>>`
   font-size: 24px;
   font-weight: 600;
-  color: ${globals.colors.black};
+  color: ${(props) => props.theme.colors.primaryText};
 `;
 
 export const Today = styled.section<HTMLProps<HTMLDivElement>>`
   font-size: 12px;
   font-weight: 400;
-  color: ${globals.colors.gray};
+  color: ${(props) => props.theme.colors.secondaryText};
 `;

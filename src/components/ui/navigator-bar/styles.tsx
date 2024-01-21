@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { HTMLProps } from "react";
-import { globals } from "../globals";
 
 export const Navigator = styled.ul<HTMLProps<HTMLUListElement>>`
   margin: 0;
@@ -13,7 +12,7 @@ export const Navigator = styled.ul<HTMLProps<HTMLUListElement>>`
   & > li > a:visited {
     text-decoration: none;
     transition-duration: 300ms;
-    color: ${globals.colors.black};
+    color: ${(props) => props.theme.colors.headerLabel};
   }
 
   & > li > a:hover {
@@ -21,6 +20,6 @@ export const Navigator = styled.ul<HTMLProps<HTMLUListElement>>`
   }
 
   & > li > a.active {
-    border-bottom: 1px solid ${globals.colors.gray};
+    border-bottom: 1px solid ${(props) => props.theme.colors.headerLabel};
   }
 `;
