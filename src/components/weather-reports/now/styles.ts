@@ -18,16 +18,16 @@ export const Top = styled.div<HTMLProps<HTMLDivElement>>`
 export const Temperature = styled.div<HTMLProps<HTMLDivElement>>`
   flex: 1;
   display: flex;
+  text-align: left;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   color: ${(props) => props.theme.colors.primaryText};
 
-  text-align: left;
   h1 {
     font-size: 80px;
     font-weight: 600;
-    margin: 0 0 -24px 0;
+    margin: 0;
   }
 
   span {

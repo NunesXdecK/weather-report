@@ -47,7 +47,7 @@ const Now: React.FC<Props> = ({ data }: Props) => {
             <NowInfo
               data={{
                 title: "Direção",
-                value: data?.windDirection10m,
+                value: `${data?.windDirection10m}°`,
                 image: "/air-icon.svg",
               }}
             />

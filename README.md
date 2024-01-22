@@ -28,28 +28,45 @@ O foco desta iniciativa é oferecer uma visão prática e aplicada de práticas 
 
 ## Instalação
 
-Instale o [Node.JS](https://nodejs.org/) na versão 18.17.0 acessando o site
+Instale o [Node.JS](https://nodejs.org/) na versão 18.17.0 acessando o site.
 
-Clone do projeto
-
-Instale as dependencias
+Clone o projeto e instale as dependencias executando o comando no prompt.
 
 NPM
 ```bash
 npm install
 ```
+
 YARN
 ```bash
 yarn install
 ```
-Então inicie o servidor vite
+
+## Iniciando a aplicação
+
+Inicie o servidor vite executando o comando no prompt.
 
 NPM
 ```bash
 npm run dev
 ```
+
 YARN
 ```bash
 yarn dev
 ```
 Acesse a [url](http://localhost:5173/)
+
+## Testes
+
+Inicie os testes executando o comando no prompt.
+
+NPM
+```bash
+npm run test
+```
+
+YARN
+```bash
+yarn test
+```
