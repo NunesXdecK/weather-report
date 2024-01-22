@@ -4,7 +4,7 @@ export class NumberValid {
   number: number;
   constructor(props: string) {
     const isNumber = /^-?\d*\.?\d*$/.test(props);
-    if (!isNumber) throw new ValidationError("not-number");
+    if (!props || !isNumber) throw new ValidationError("not-number");
     this.number = Number(props);
   }
 }

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Button } from "../ui/button/styles";
 import { Paper } from "../ui/card/styles";
 import { Forms } from "../ui/forms/styles";
@@ -7,6 +7,9 @@ import { useShallow } from "zustand/react/shallow";
 import ProgressBar from "../ui/progress-bar";
 
 const GeoForm: React.FC = () => {
+  const latitudeRef = useRef<HTMLInputElement>(null);
+  const longitdeRef = useRef<HTMLInputElement>(null);
+
   const [loading, error, getForecast] = useWeatherStore(
     useShallow((state) => [
       state.loading.state.loading,
@@ -15,8 +18,23 @@ const GeoForm: React.FC = () => {
     ])
   );
 
-  const latitudeRef = useRef<HTMLInputElement>(null);
-  const longitdeRef = useRef<HTMLInputElement>(null);
+  useEffect(() => {
+    const getLocation = () => {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const { latitude, longitude } = position.coords;
+            if (latitudeRef.current) latitudeRef.current.value = latitude.toString();
+            if (longitdeRef.current) longitdeRef.current.value = longitude.toString();
+          }
+        );
+      } else {
+        console.error('GeolocationError');
+      }
+    };
+    getLocation(); 
+  }, []);
+
 
   return (
     <section>

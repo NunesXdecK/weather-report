@@ -12,7 +12,7 @@ export const dayTheme: ThemeProps = {
     black: "#000000",
     white: "#FFFFFF",
     gray: "#9E9E9E",
-    error: "#F87171",
+    error: "#7f1d1d",
     headerBackground: "#5272ad",
     headerLabel: "#FFFFFF",
     primaryButtonBackground: "#5272ad",
@@ -47,6 +47,7 @@ const afternoonTheme: ThemeProps = {
   ...dayTheme,
   colors: {
     ...dayTheme.colors,
+    error: "#dc2626",
     headerBackground: "#af8e70",
     primaryButtonBackground: "#af8e70",
     rangeValueBorder: "#af8e70",
@@ -60,6 +61,7 @@ const nightTheme: ThemeProps = {
   ...dayTheme,
   colors: {
     ...dayTheme.colors,
+    error: "#f87171",
     label: "#FFFFFF",
     primaryText: "#FFFFFF",
     inputHoverBorder: "#FFFFFF",
