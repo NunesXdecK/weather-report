@@ -35,6 +35,10 @@ const GeoForm: React.FC = () => {
     getLocation(); 
   }, []);
 
+  useEffect(() => {
+    if (latitudeRef.current) latitudeRef.current.value = "-14.8642243";
+    if (longitdeRef.current) longitdeRef.current.value = "-40.8842624";
+  }, []);
 
   return (
     <section>
